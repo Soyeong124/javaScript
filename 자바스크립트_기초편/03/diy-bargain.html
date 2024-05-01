@@ -25,5 +25,21 @@
 		</ul>
 		<div id="showResult"></div>	
 	</div>	
+	<script>
+		function showPrice() {
+			var originPrice = document.querySelector("#oPrice").value;
+			var rate = document.querySelector("#rate").value;
+			if (originPrice > 0 && rate > 0) {
+				var savedPrice = originPrice * rate/100;
+				var resultPrice = originPrice - savedPrice;
+				document.querySelector("#showResult").innerHTML = `최종 가격은 ${resultPrice}라네요`
+			}
+
+			else {
+				alert("원래가격과 할인율을 입력하세요")
+			}
+
+		}
+	</script>
 </body>
 </html>

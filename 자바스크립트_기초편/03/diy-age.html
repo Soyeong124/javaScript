@@ -10,5 +10,14 @@
 <body>	
 	<button class="btn" onclick="calc()">나이 계산하기</button>
 	<div id="result" class="show">(결과 값 표시)</div> 
+
+	<script>
+		function calc() {
+			var birth = prompt("너 언제 태어났어?", "YYYY"); 
+			var year = 2024;
+			var age = year - birth + 1;
+			document.querySelector("#result").innerHTML = age;
+		}
+	</script>
 </body>
 </html>

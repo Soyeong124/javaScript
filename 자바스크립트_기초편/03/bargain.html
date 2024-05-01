@@ -25,5 +25,15 @@
 		</ul>
 		<div id="showResult"></div>	
 	</div>	
+
+	<script>
+		function showPrice() {
+			var originPrice = document.querySelector("#oPrice").value;
+			var rate = document.querySelector("#rate").value;
+			var savedPrice = originPrice * (rate/100);
+			var resultPrice = originPrice - savedPrice;
+			document.querySelector("#showResult").innerHTML = "이 상품의 정가는 " + originPrice + "입니다.할인율은 "+ rate + "이고 절약한 금액은 " + savedPrice + "입니다. 최종 결제 금액은 "+resultPrice +"이네요";
+		}
+	</script>
 </body>
 </html>
